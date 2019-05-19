@@ -5,6 +5,7 @@ from django.contrib.auth.models import BaseUserManager
 
 # Create your models here.
 
+
 class UserProfileManager(BaseUserManager):
     """ Helps Django work with our custome user model. """
 
@@ -34,6 +35,7 @@ class UserProfileManager(BaseUserManager):
 
         return user
 
+
 class UserProfile(AbstractBaseUser, PermissionsMixin):
     """ Represents a "user profile" inside our system. """
 
@@ -60,6 +62,7 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
     def __str__(self):
         """ Django uses this when it needs to convert the object to a string. """
         return self.email
+
 
 class ProfileFeedItem(models.Model):
     """ Profile status update. """
